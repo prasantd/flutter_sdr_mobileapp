@@ -30,7 +30,7 @@ class _ListenLiveScreenState extends State<ListenLiveScreen> {
     super.initState();
     _future = getSponsor();
     _timer = new Timer.periodic(
-        Duration(seconds: 2),
+        Duration(seconds: 30),
         (Timer t) => setState(() {
               CreateTrackTitle();
             }));
@@ -121,6 +121,7 @@ class CreateSponsorWidget extends StatelessWidget {
           } else if (snapshot.hasError) {
             return new Text(
               'Coming Soon',
+              textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 20,
                 fontFamily: 'Verdana',
